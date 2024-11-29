@@ -1,7 +1,3 @@
-body {
-  display: inline-flex;
-  flex-flow: column wrap;
-}
 .mb-8 {
   background-color: rgb(236, 244, 250);
   border-radius: 5px;

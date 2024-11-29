@@ -121,14 +121,14 @@ function formatarMoeda($valor, $moeda) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="orca.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 <body class="bg-gray-100">
 
 <header class="bg-blue-600 text-white py-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl font-semibold">Orçamento Pessoal</h1>
-        </div>
+<h1 class="text-3xl font-semibold">Orçamento Pessoal</h1>
+        <a href="logout.php"  class="btn btn-log" title="Sair"><span class="material-symbols-outlined">logout</span></a>
     </header>
 
     <nav class="opcoes">
@@ -141,7 +141,9 @@ function formatarMoeda($valor, $moeda) {
         <a href="artigo.html">Artigos</a>
     </nav>
     <div class="container" id="navegacao">
-         <a href="dashboard.php">voltar</a>        
+         <a href="dashboard.php" title="voltar" class="btn"><span class="material-symbols-outlined">
+arrow_back_ios
+</span></a>        
          <div id="mensagem">
                     <!-- Exibe erro -->
         <?php if ($erro): ?>
