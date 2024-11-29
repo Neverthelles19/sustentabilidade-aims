@@ -165,7 +165,7 @@ arrow_back_ios
 
 <!-- Formulário para inserir gastos -->
 <form action="orcamento.php" method="POST" class="space-y-4">
-<h1>COLOCAR TÍTULO</h1>
+<h1>Análise de orçamento</h1>
 <fieldset>
     <legend>            <label for="moeda" class="block text-lg font-medium">Escolha a Moeda:</label></legend>
 
