@@ -49,8 +49,8 @@ if (!isset($_SESSION['user_id'])) {
         </p>
 <div class="container container-card">
 <div class="mt-8 card">
-            <h3 class="text-xl font-medium text-gray-800">Como você pode ajudar:</h3>
             <img src="dicas-economia.png" alt="dicas economicas">
+            <h3 class="text-xl font-medium text-gray-800">Como você pode ajudar:</h3>
             <ul class="lista-links">
                 <li><a href="dicas.html" class="text-blue-600 hover:text-blue-800">Acesse As Dicas de Economia</a></li>
             </ul>
@@ -58,15 +58,15 @@ if (!isset($_SESSION['user_id'])) {
 
 
         <div class="mt-8 card">
-            <h3 class="text-xl font-medium text-gray-800">Organize seus Gastos:</h3>
             <img src="organizar-gastos.png" alt="organizar gastos">
+            <h3 class="text-xl font-medium text-gray-800">Organize seus Gastos:</h3>
             <p class="text-gray-600">
                 Quer controlar melhor suas finanças? <a href="orcamento.php" class="text-blue-600 hover:text-blue-800">Clique aqui para organizar seus gastos</a>.
             </p>
         </div>
 <div class="mt-8 card">
-            <h3 class="text-xl font-medium text-gray-800">Recursos educativos:</h3>
             <img src="recursos-educativos.png" alt="recursos educativos">
+            <h3 class="text-xl font-medium text-gray-800">Recursos educativos:</h3>
             <ul class="lista-links">
                 <li><a href="artigo.html" class="text-blue-600 hover:text-blue-800">Leia Artigos sobre Finanças Pessoais</a></li>
                 <li><a href="politicas_publicas.html" class="text-blue-600 hover:text-blue-800">Politicas públicas</a></li>
