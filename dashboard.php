@@ -21,23 +21,22 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboard.css">
     <!-- CDN do Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
     <header class="bg-blue-600 text-white text-center py-6">
-        <h1 class="text-4xl font-bold">Orçamento Pessoal</h1>
+        <h1 class="text-4xl font-bold">Bem-vindo ao Orçamento Pessoal</h1>
     </header>
+    <nav>
+    <a href="dashboard.php">Início</a>
+    <a href="orcamento.php">orçamento</a>
+    <a href="dicas.html">Dicas</a>
+    <a href="politicas_publicas.html">Politicas públicas</a>
+    <a href="artigo.html">Artigos</a>
+</nav>
 
-    <nav class="opcoes">
-      <a href="dashboard.php" class="hover:text-yellow-400">Início</a>
-      <a href="orcamento.php" class="hover:text-yellow-400">Orçamento</a>
-      <a href="dicas.html" class="hover:text-yellow-400">Dicas</a>
-      <a href="politicas_publicas.html" class="hover:text-yellow-400"
-        >Políticas públicas</a
-      >
-        <a href="artigo.html">Artigos</a>
-    </nav>
     <main class="max-w-4xl mx-auto p-6">
         <h2 class="text-2xl font-semibold text-gray-800 mt-6">Inovação e Sustentabilidade: Análise Econômica e Social</h2>
 
@@ -78,7 +77,7 @@ if (!isset($_SESSION['user_id'])) {
     </main>
 
     <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p>&copy; 2024 Comunidade Financeira. Todos os direitos reservados.</p>
+        <p>&copy;AIMS 2024 Comunidade Financeira. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

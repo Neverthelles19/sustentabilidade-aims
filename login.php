@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <footer class="bg-gray-800 text-white py-4 mt-8">
         <div class="container mx-auto text-center">
-            <p>&copy; 2024 Análise Econômica Social.AIMS</p>
+            <p>&copy;AIMS 2024 Análise Econômica Social. </p>
         </div>
     </footer>
 

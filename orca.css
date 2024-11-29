@@ -34,6 +34,9 @@
   display: inline-flex;
   flex-flow: row nowrap;
   width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-evenly;
 }
 
 #orcamentoChart {
@@ -52,6 +55,7 @@
 .resumo-grafico {
   flex-flow: column wrap;
   width: 100%;
+  min-width: 250px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -63,6 +67,7 @@
 }
 
 #resumo {
+  width: 100%;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-content: center;

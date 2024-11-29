@@ -141,7 +141,7 @@ a:hover {
 
 /* Formulário */
 form {
-  width: clamp(100px, 70%, 100%);
+  width: clamp(100px, 550px, 100%);
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
@@ -241,4 +241,8 @@ footer {
   text-align: center;
   width: 100%;
   margin-top: 10px;
+}
+
+section{
+  width: 100%;
 }
