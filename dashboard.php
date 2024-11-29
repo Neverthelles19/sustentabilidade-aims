@@ -33,7 +33,7 @@ if (!isset($_SESSION['user_id'])) {
     </header>
     <nav>
     <a href="dashboard.php">Início</a>
-    <a href="orcamento.php">orçamento</a>
+    <a href="orcamento.php">Orçamento</a>
     <a href="dicas.html">Dicas</a>
     <a href="politicas_publicas.html">Politicas públicas</a>
     <a href="artigo.html">Artigos</a>
@@ -75,8 +75,5 @@ if (!isset($_SESSION['user_id'])) {
 
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p>&copy;AIMS 2024 Comunidade Financeira. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>

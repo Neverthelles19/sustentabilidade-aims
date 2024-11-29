@@ -18,16 +18,7 @@ body {
   align-items: flex-start;
   justify-content: space-evenly;
 }
-div {
-  border-radius: 5px;
-  padding: 15px;
-  box-sizing: border-box;
-  display: flex;
-flex-flow: column wrap;
-  justify-content: flex-start;
-  width: 48%;
-  max-width: 600px;
-}
+
 nav {
   width: 100%;
   display: inline-flex;
@@ -57,7 +48,7 @@ main {
   gap: 10px;
   justify-content: flex-start;
   padding: 20px;
-  align-items: flex-start;
+  align-items: center;
   align-content: flex-start;
   transition: all 0.25s ease-in-out;
 }
@@ -307,8 +298,12 @@ border-color: #1c2d3f;
 }
   .card{
       width: clamp(100px, 250px, 50%);
-      min-height:100px;
+      height: clamp(100px,250px,100%);
+      display: inline-flex;
+      flex-flow: column wrap;
       background:white;
-      padding:10px;
-      margin:auto;
+      border-radius: 0.5em;
+      padding:15px;
   }
+
+  
