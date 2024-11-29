@@ -119,7 +119,9 @@ function formatarMoeda($valor, $moeda) {
     <title>Orçamento Pessoal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="orca.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="orca.css">
+
 </head>
 <body class="bg-gray-100">
 
@@ -129,13 +131,14 @@ function formatarMoeda($valor, $moeda) {
         </div>
     </header>
 
-    <nav class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-center space-x-6">
-            <a href="dashboard.php" class="hover:text-yellow-400">Início</a>
-            <a href="orcamento.php" class="hover:text-yellow-400">Orçamento</a>
-            <a href="dicas.html" class="hover:text-yellow-400">Dicas</a>
-            <a href="politicas_publicas.html" class="hover:text-yellow-400">Políticas públicas</a>
-        </div>
+    <nav class="opcoes">
+      <a href="dashboard.php" class="hover:text-yellow-400">Início</a>
+      <a href="orcamento.php" class="hover:text-yellow-400">Orçamento</a>
+      <a href="dicas.html" class="hover:text-yellow-400">Dicas</a>
+      <a href="politicas_publicas.html" class="hover:text-yellow-400"
+        >Políticas públicas</a
+      >
+        <a href="artigo.html">Artigos</a>
     </nav>
 
     <main class="mx-auto p-6 ">

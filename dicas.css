@@ -1,0 +1,77 @@
+body {
+  display: inline-flex;
+  flex-flow: column wrap;
+}
+.mb-8 {
+  background-color: rgb(236, 244, 250);
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 48%; /* Ajusta para que duas fiquem lado a lado */
+  max-width: 600px; /* Limite de largura */
+}
+
+.mb-8:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.first-div {
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto */
+  justify-content: flex-start;
+}
+
+.first-div img {
+  width: 150px; /* Ajuste do tamanho da imagem */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.mb-8 {
+  background-color: rgb(236, 244, 250);
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 48%;
+  max-width: 600px;
+}
+
+.mb-8:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.first-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.first-div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.container {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
