@@ -80,7 +80,6 @@ p {
   font-size: 1rem;
   text-align: left;
 }
-
 /* codigo normal */
 header {
   width: 100%;
@@ -93,7 +92,7 @@ header {
   align-items: center;
   align-content: flex-start;
 }
-header h1{
+header h1 {
   margin: auto;
 }
 h1 {
@@ -240,7 +239,7 @@ footer {
   margin-top: 10px;
 }
 
-section{
+section {
   width: 100%;
 }
 
@@ -258,28 +257,28 @@ section{
   text-decoration: none;
   cursor: pointer;
 }
-.btn:hover{
+.btn:hover {
   background: #007bff;
   text-decoration: none;
 }
 
-.btn:hover .material-symbols-outlined{
+.btn:hover .material-symbols-outlined {
   color: #f1f1f1;
 }
 
-.btn-log{
+.btn-log {
   position: relative;
   right: 0;
   border-color: #ddd;
 }
-.btn-log .material-symbols-outlined{
+.btn-log .material-symbols-outlined {
   color: #f1f1f1;
 }
-.btn-log:hover{
-background: #1c2d3f;
-border-color: #1c2d3f;
+.btn-log:hover {
+  background: #1c2d3f;
+  border-color: #1c2d3f;
 }
-.lista-links{
+.lista-links {
   width: 100%;
   list-style: none;
   text-align: left;
@@ -296,19 +295,17 @@ border-color: #1c2d3f;
   margin: auto;
   padding: 10px;
 }
-  .card{
-      width: clamp(100px, 250px, 50%);
-      height: clamp(100px,250px,100%);
-      display: inline-flex;
-      flex-flow: column wrap;
-      background:white;
-      border-radius: 0.5em;
-      padding:15px;
-  }
+.card {
+  width: clamp(100px, 250px, 50%);
+  height: clamp(100px, 250px, 100%);
+  display: inline-flex;
+  flex-flow: column wrap;
+  background: white;
+  border-radius: 0.5em;
+  padding: 15px;
+}
 
-  img {
-  width: 220px ;
-    height: auto;
-  }
-
-  
+img {
+  width: 220px;
+  height: auto;
+}
