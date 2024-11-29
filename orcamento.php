@@ -123,19 +123,26 @@ function formatarMoeda($valor, $moeda) {
 </head>
 <body class="bg-gray-100">
 
-    <header class="bg-blue-600 text-white p-4">
-        <h1 class="text-2xl font-semibold">Orçamento Pessoal</h1>
+<header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-semibold">Orçamento Pessoal</h1>
+        </div>
     </header>
-    <nav>
-    <a href="dashboard.php">Início</a>
-    <a href="orcamento.php">orçamento</a>
-    <a href="politicas_publicas.html">politicas públicas</a>
-    <a href="artigo.html">Artigos</a>
-    <a href="dicas.html">Dicas</a>
-</nav>
 
-    <main class="container mx-auto p-6">
-        <!-- Exibe erro -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="dashboard.php" class="hover:text-yellow-400">Início</a>
+            <a href="orcamento.php" class="hover:text-yellow-400">Orçamento</a>
+            <a href="dicas.html" class="hover:text-yellow-400">Dicas</a>
+            <a href="politicas_publicas.html" class="hover:text-yellow-400">Políticas públicas</a>
+        </div>
+    </nav>
+
+    <main class="mx-auto p-6 ">
+        <div class="container" id="navegacao">
+         <a href="dashboard.php">voltar</a>        
+         <div id="mensagem">
+                    <!-- Exibe erro -->
         <?php if ($erro): ?>
             <div class="alert alert-error text-red-500 bg-red-100 p-4 rounded-lg mb-4">
                 <?php echo $erro; ?>
@@ -148,57 +155,82 @@ function formatarMoeda($valor, $moeda) {
                 <?php echo $sucesso; ?>
             </div>
         <?php endif; ?>
+        </div>            
+        </div>
 
-        <!-- Formulário para inserir gastos -->
+         <div class="container">
+        <div class="container">
+
+                <!-- Formulário para inserir gastos -->
         <form action="orcamento.php" method="POST" class="space-y-4">
-            <label for="moeda" class="block text-lg font-medium">Escolha a Moeda:</label>
+            <h1>COLOCAR TÍTULO</h1>
+            <fieldset>
+                <legend>            <label for="moeda" class="block text-lg font-medium">Escolha a Moeda:</label></legend>
+
             <select name="moeda" id="moeda" required class="w-full p-2 border border-gray-300 rounded-md">
                 <option value="BRL" <?php echo (isset($moeda_selecionada) && $moeda_selecionada == 'BRL') ? 'selected' : ''; ?>>Real (R$)</option>
                 <option value="USD" <?php echo (isset($moeda_selecionada) && $moeda_selecionada == 'USD') ? 'selected' : ''; ?>>Dólar (USD)</option>
                 <option value="KRW" <?php echo (isset($moeda_selecionada) && $moeda_selecionada == 'KRW') ? 'selected' : ''; ?>>Won Coreano (₩)</option>
             </select>
+            </fieldset>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label for="alimentacao" class="block text-lg font-medium">Alimentação:</label>
+                <fieldset>
+                    <legend><label for="alimentacao" class="block text-lg font-medium">Alimentação:</label></legend>
+                    
                     <input type="number" id="alimentacao" name="alimentacao" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
 
-                <div>
-                    <label for="transporte" class="block text-lg font-medium">Transporte:</label>
+                <fieldset>
+                    <legend> <label for="transporte" class="block text-lg font-medium">Transporte:</label></legend>
+                   
                     <input type="number" id="transporte" name="transporte" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
 
-                <div>
-                    <label for="lazer" class="block text-lg font-medium">Lazer:</label>
+                <fieldset>
+                    <legend><label for="lazer" class="block text-lg font-medium">Lazer:</label></legend>
+                    
                     <input type="number" id="lazer" name="lazer" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
 
-                <div>
-                    <label for="moradia" class="block text-lg font-medium">Moradia:</label>
+                <fieldset>
+                    <legend> <label for="moradia" class="block text-lg font-medium">Moradia:</label></legend>
+                   
                     <input type="number" id="moradia" name="moradia" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
 
-                <div>
-                    <label for="outros" class="block text-lg font-medium">Outros:</label>
+                <fieldset>
+                    <legend><label for="outros" class="block text-lg font-medium">Outros:</label></legend>
                     <input type="number" id="outros" name="outros" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
 
-                <div>
-                    <label for="renda" class="block text-lg font-medium">Renda:</label>
+                <fieldset>
+                    <legend> <label for="renda" class="block text-lg font-medium">Renda:</label></legend>
+                   
                     <input type="number" id="renda" name="renda" required class="w-full p-2 border border-gray-300 rounded-md">
-                </div>
+                </fieldset>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             </div>
 
             <button type="submit" class="bg-blue-600 text-white p-2 rounded-md mt-4">Calcular</button>
         </form>
+        </div>
+<section class="container" id="resumo">
 
         <!-- Exibe o gráfico com os dados de orçamento -->
         <?php if (isset($_SESSION['orcamento'])): ?>
+                <div class="resumo-grafico">
             <h2 class="text-xl font-medium mt-8">Gráfico de Orçamento</h2>
-            <canvas id="orcamentoChart"></canvas>
+            <canvas id="orcamentoChart" class="chart" style="width:200px"></canvas>
             <script>
-                const ctx = document.getElementById('orcamentoChart').getContext('2d');
+                const canvas = document.getElementById('orcamentoChart');
+
+                // Define as dimensões desejadas
+                canvas.width = 1200;  // Largura em pixels
+                canvas.height = 1200; // Altura em pixels
+
+                const ctx = canvas.getContext('2d');
+
                 const chartData = {
                     labels: ['Alimentação', 'Transporte', 'Lazer', 'Moradia', 'Outros'],
                     datasets: [{
@@ -221,54 +253,80 @@ function formatarMoeda($valor, $moeda) {
                     data: chartData
                 });
             </script>
+   </div>
+        <?php endif; ?>   
+    
+<div class="resumo-tabela">
+    <!-- Verifica se os dados estão na sessão -->
+    <?php if (isset($_SESSION['orcamento']) && 
+              isset($_SESSION['orcamento']['alimentacao']) && 
+              isset($_SESSION['orcamento']['transporte']) && 
+              isset($_SESSION['orcamento']['lazer']) && 
+              isset($_SESSION['orcamento']['moradia']) && 
+              isset($_SESSION['orcamento']['outros']) && 
+              isset($_SESSION['orcamento']['renda']) && 
+              isset($_SESSION['orcamento']['total_gastos']) && 
+              isset($_SESSION['orcamento']['saldo']) && 
+              isset($_SESSION['orcamento']['moeda'])): ?>
+        
+        <!-- Tabela com os resultados -->
+        <h2 class="text-xl font-medium mt-8">Resumo do Orçamento</h2>
+        <table class="table-auto w-full mt-4 border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-2">Categoria</th>
+                    <th class="border border-gray-300 p-2">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-gray-300 p-2">Alimentação</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['alimentacao'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Transporte</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['transporte'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Lazer</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['lazer'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Moradia</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['moradia'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Outros</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['outros'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Renda</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['renda'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="border border-gray-300 p-2">Total de Gastos</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['total_gastos'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="border border-gray-300 p-2">Saldo Restante</td>
+                    <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['saldo'], $_SESSION['orcamento']['moeda']); ?></td>
+                </tr>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <!-- Caso os dados não estejam na sessão, você pode exibir uma mensagem -->
+        <p>Não há dados de orçamento disponíveis.</p>
+    <?php endif; ?>
+</div>
 
-            <!-- Tabela com os resultados -->
-            <h2 class="text-xl font-medium mt-8">Resumo do Orçamento</h2>
-            <table class="table-auto w-full mt-4 border-collapse border border-gray-300">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="border border-gray-300 p-2">Categoria</th>
-                        <th class="border border-gray-300 p-2">Valor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Alimentação</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['alimentacao'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Transporte</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['transporte'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Lazer</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['lazer'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Moradia</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['moradia'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Outros</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['outros'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Renda</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['renda'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr class="font-semibold">
-                        <td class="border border-gray-300 p-2">Total de Gastos</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['total_gastos'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                    <tr class="font-semibold">
-                        <td class="border border-gray-300 p-2">Saldo Restante</td>
-                        <td class="border border-gray-300 p-2"><?php echo formatarMoeda($_SESSION['orcamento']['saldo'], $_SESSION['orcamento']['moeda']); ?></td>
-                    </tr>
-                </tbody>
-            </table>
-        <?php endif; ?>
+
+</section>
+         </div>
+
+
+
 
     </main>
- <a href="dashboard.php">voltar</a>
+
 </body>
 </html>
