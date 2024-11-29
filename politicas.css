@@ -1,0 +1,25 @@
+div {
+    background-color: rgb(236, 244, 250);
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 48%;
+    max-width: 600px;
+}
+nav {
+    background-color: #1c2d3f;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
