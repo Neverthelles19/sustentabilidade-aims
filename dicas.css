@@ -1,3 +1,26 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav {
+    background-color: #1c2d3f;
+    padding: 9px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
 
 .mb-8 {
     background-color: rgb(236, 244, 250);
@@ -8,8 +31,8 @@
     flex-direction: column;
     justify-content: flex-start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 48%;
-    max-width: 600px;
+    width: 48%; /* Ajusta para que duas fiquem lado a lado */
+    max-width: 600px; /* Limite de largura */
 }
 
 .mb-8:hover {
@@ -19,14 +42,27 @@
 
 .first-div {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha a imagem e o texto */
     justify-content: flex-start;
 }
 
- .first-div {
-    width: 150px;
+.first-div img {
+    width: 150px; /* Ajuste do tamanho da imagem */
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
 }
+
+ h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+ p {
+    font-size: 1rem;
+    text-align: left;
+}
+
