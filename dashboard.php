@@ -18,6 +18,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo à Comunidade Financeira</title>
+    <link rel="stylesheet" href="dashboard.css">
     <!-- CDN do Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"></script>
 </head>

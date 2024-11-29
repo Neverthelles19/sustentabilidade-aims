@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="stylesheet" rel="login.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
 
@@ -99,6 +100,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>&copy; 2024 Análise Econômica Social.AIMS</p>
         </div>
     </footer>
+
+    <style>
+        footer {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  </style>
 
 </body>
 </html>
